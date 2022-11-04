@@ -1,0 +1,48 @@
+[22,27,16,2,18,6]
+Yukarı verilen dizinin sort türüne göre aşamalarını yazınız.
+
+1. AŞAMA: 22 sayısı kendi başına sıralıdır. 
+22 | 27,16,2,18,6
+
+2. AŞAMA: 22 ile 27 sayısı kıyaslanır. 22 sayısı 27 sayısından küçüktür. Değişiklik gerçekleşmez.
+22,27| 16,2,18,6
+
+3. AŞAMA: 16 sayısı ile 27 sayısı kıyaslanır. 16 sayısı 27 sayısından küçüktür. 22 sayısı 16 sayısından büyük olduğundan swap yaparız.
+22,16,27 | 2,18,6  ->   16,22,27 | 2,18,6
+
+4. AŞAMA: 2 sayısı 27 sayısı ile kıyaslanır. 2 sayısı 27 sayısından küçüktür. 2 sayısı bir geriye atılır. 
+2 sayısı 22 sayısı ile kıyaslanır. 22 sayısı 2 sayısından büyük olduğundan 2 sayısını geriye atarız. 
+2 sayısı 16 sayısı ile kıyaslanır. 16>2 olduğundan 2 sayısı geriye atılır.
+16,22,2,27 | 18,6  ->   16,2,22,27 | 18,6   ->  2,16,22,27 | 18,6
+
+5. AŞAMA: 18 sayısı 27 sayısı ile kıyaslanır. 18 sayısı 27 sayısından küçüktür, bir geriye atılır. 22>18 olduğundan 18 sayısı bir geriye atılır.
+2,16,22,18,27 | 6   ->  2,16,18,22,27 | 6 
+
+6. AŞAMA:6 sayısı 27 sayısı ile kıyaslanır. 6 sayısı 27 sayısından küçüktür, 6 sayısı bir geriye atılır. 
+6 sayısı 22 sayısı ile kıyaslanır. 6 sayısı 22 sayısından küçüktür, 6 sayısı bir geriye atılır.
+6 sayısı 18 sayısı ile kıyaslanır. 6  sayısı 18 sayısından küçüktür, 6 sayısı bir geriye atılır.
+6 sayısı 16 sayısı ile kıyaslanır. 6 sayısı 16 sayısından küçüktür, 6 sayısı bir geriye atılır.
+6 sayısı 2 sayısı ile kıyaslanır. 6 sayısı 2 sayısından büyük olduğundan değişiklik gerçekleşmez.
+2,16,18,22,6,27 ->  2,16,18,6,22,27   ->  2,16,6,18,22,27  -> 2,6,16,18,22,27
+
+Sıralı hale gelen dizinin son hali:
+[2,6,16,18,22,27]
+
+Big-O gösterimini yazınız.
+
+Worst Case: O(n^2)          [27,22,18,16,6,2]
+Average Case: O(n^2)        [6,16,2,22,18,27]
+Best Case: O(n)             [2,6,16,18,22,27]
+
+Dizi sıralandıktan sonra 18 sayısı hangi case kapsamına girer? Yazınız.
+
+18 sayısı sıralı dizinin en ortasında bulunduğu için Average Case kapsamına girer.
+
+
+
+[7,3,5,8,2,9,4,15,6] dizisinin Insertion Sort'a göre ilk 4 adımını yazınız.
+
+1. Adım: [3,7,5,8,2,9,4,15,6]
+2. Adım: [3,5,7,8,2,9,4,15,6]
+3. Adım: [3,5,7,8,2,9,4,15,6]
+4. Adım: [2,3,5,7,8,9,4,15,6] 
